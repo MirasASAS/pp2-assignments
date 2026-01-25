@@ -1,3 +1,1 @@
-s = "miras" 
-print("hello")
-print(s[3:])
+print("helloworld")                                                                         
