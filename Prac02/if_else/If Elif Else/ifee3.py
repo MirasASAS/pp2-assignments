@@ -2,6 +2,6 @@ fruit = "apple"
 if fruit == "banana":
     print("Banana")
 elif fruit == "apple":
-    print("Apple")
+    print("Aple")
 else:
-    print("Other fruit")
+    print("Othr fruit")

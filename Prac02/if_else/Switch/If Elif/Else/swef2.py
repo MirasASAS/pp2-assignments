@@ -1,6 +1,6 @@
 signal = "green"
 if signal == "red":
-    print("Stop")
+    print("Sto")
 elif signal == "yellow":
     print("Caution")
 elif signal == "green":
