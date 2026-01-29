@@ -7,7 +7,7 @@ replacement = input()
 print(sentence.replace(target, replacement))
 
 
-#120
+#1201
 
 a = int(input())
 b = int(input())
