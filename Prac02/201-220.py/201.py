@@ -24,5 +24,5 @@ for k in range(a):
     else:
         continue
 
-for i in range(a):
+for k in range(a):
     print(n[i], end=" ")    
