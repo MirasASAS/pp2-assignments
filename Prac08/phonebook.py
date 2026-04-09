@@ -14,7 +14,6 @@ def get_connection():
 conn = get_connection()
 cursor = conn.cursor()
 
-# Create table
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS phonebook (
         id SERIAL PRIMARY KEY,
@@ -24,7 +23,6 @@ cursor.execute("""
     );
 """)
 
-# Create functions and procedures directly
 cursor.execute("""
 CREATE OR REPLACE FUNCTION search_contacts(pattern TEXT)
 RETURNS TABLE(id INT, first_name VARCHAR, last_name VARCHAR, phone VARCHAR) AS $$
@@ -113,41 +111,35 @@ $$;
 conn.commit()
 
 
-# 1. Search contacts
 def search(pattern):
     cursor.execute("SELECT * FROM search_contacts(%s)", (pattern,))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
 
-# 2. Upsert single contact
+
 def upsert(first, last, phone):
     cursor.execute("CALL upsert_contact(%s, %s, %s)", (first, last, phone))
     conn.commit()
     print("Done.")
 
-# 3. Insert many with validation
 def insert_many(data_list):
-    # data_list = [{"first_name":"Ali","last_name":"B","phone":"+77011234567"}, ...]
     cursor.execute("CALL insert_many_contacts(%s)", (json.dumps(data_list),))
     conn.commit()
     print("Done.")
 
-# 4. Paginated query
 def get_paged(limit, offset):
     cursor.execute("SELECT * FROM get_contacts_paged(%s, %s)", (limit, offset))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
 
-# 5. Delete contact
 def delete(username=None, phone=None):
     cursor.execute("CALL delete_contact(%s, %s)", (username, phone))
     conn.commit()
     print("Deleted.")
 
 
-# --- MENU ---
 while True:
     print("\n--- PhoneBook v2 ---")
     print("1. Search")
