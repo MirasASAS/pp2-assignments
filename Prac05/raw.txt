@@ -1,0 +1,38 @@
+=====================================
+        SUPERMART GROCERY STORE
+        123 Main Street, City, ST 12345
+        Tel: (555) 123-4567
+=====================================
+Date: 04/26/2026          Time: 14:35:22
+Cashier: John D.          Register: #03
+-------------------------------------
+ITEMS PURCHASED:
+-------------------------------------
+Whole Milk 1L              $2.99
+Bread - White Loaf         $1.49
+Chicken Breast 500g        $7.85
+Pasta Spaghetti 400g       $1.29
+Tomato Sauce (jar)         $3.50
+Cheddar Cheese 200g        $4.99
+Orange Juice 1L            $3.25
+Eggs (12 pack)             $5.49
+Butter 250g                $2.79
+Greek Yogurt               $2.15
+Apples x3                  $1.80
+Banana Bunch               $0.99
+-------------------------------------
+SUBTOTAL:                  $38.57
+TAX (8%):                   $3.09
+DISCOUNT (MEMBER):         -$2.00
+-------------------------------------
+TOTAL:                     $39.66
+-------------------------------------
+Payment Method: CREDIT CARD
+Card Type: VISA
+Card Number: **** **** **** 4821
+Authorization: #AUTH892341
+-------------------------------------
+Thank you for shopping with us!
+Visit us at: www.supermart.com
+Customer Service: 1-800-555-9999
+=====================================
